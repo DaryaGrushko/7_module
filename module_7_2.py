@@ -20,7 +20,7 @@ def custom_write(file_name, strings):
         file = open(name, 'a', encoding='utf-8')  # открыть файл
         file.seek(bytes_start_string) # передвинуть курсор на bytes_start_string
         file.write(f"{string}\n") #записать текст в файл
-
+        file.close()
         strings_positions[(count_string, bytes_start_string)] = string
        # print ('----------------')
 
